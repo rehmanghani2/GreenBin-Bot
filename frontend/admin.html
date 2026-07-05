@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | GreenBin Genius</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon">
+                    <i data-feather="box"></i>
+                </div>
+                <h2>GreenBin Genius</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="/" class="nav-item">
+                    <i data-feather="message-square"></i>
+                    <span>Triage Chat</span>
+                </a>
+                <a href="/static/admin.html" class="nav-item active">
+                    <i data-feather="shield"></i>
+                    <span>Admin Dashboard</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="profile-avatar admin-avatar">A</div>
+                    <div class="profile-info">
+                        <span class="profile-name">System Admin</span>
+                        <span class="profile-role">Clearance: Level 4</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-title">
+                    <h1>Triage Dashboard</h1>
+                    <p class="subtitle">Review and resolve AI-flagged waste classifications</p>
+                </div>
+                <div class="topbar-actions">
+                    <div class="badge" id="pending-count">0 Pending</div>
+                </div>
+            </header>
+
+            <div class="dashboard-wrapper">
+                <div class="grid" id="triage-grid">
+                    <!-- Items will be injected here via JS -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Initialize Icons -->
+    <script>
+      feather.replace();
+    </script>
+    <script src="/static/admin.js"></script>
+</body>
+</html>

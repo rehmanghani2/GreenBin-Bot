@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBin Genius | Professional AI Coordinator</title>
+    <!-- Switch to Inter for a highly professional SaaS look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <!-- Feather icons for modern scalable SVG icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon">
+                    <i data-feather="box"></i>
+                </div>
+                <h2>GreenBin Genius</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="/" class="nav-item active">
+                    <i data-feather="message-square"></i>
+                    <span>Triage Chat</span>
+                </a>
+                <a href="/static/admin.html" class="nav-item">
+                    <i data-feather="shield"></i>
+                    <span>Admin Dashboard</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="profile-avatar">U</div>
+                    <div class="profile-info">
+                        <span class="profile-name">Guest User</span>
+                        <span class="profile-role">Citizen</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-title">
+                    <h1>Recycling Assistance</h1>
+                    <p class="subtitle">AI-powered waste classification and guidance</p>
+                </div>
+                <div class="topbar-actions">
+                    <div class="status-indicator">
+                        <span class="status-dot online"></span>
+                        <span class="status-text">AI Systems Online</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="chat-wrapper">
+                <div class="chat-box" id="chat-box">
+                    <!-- Welcome Message -->
+                    <div class="message ai-message welcome">
+                        <div class="avatar ai-avatar">
+                            <i data-feather="cpu"></i>
+                        </div>
+                        <div class="message-content">
+                            <h3>Welcome to GreenBin Genius</h3>
+                            <p>I am your AI Recycling Coordinator. Please describe the item you wish to dispose of, or provide an image link. I will determine if it is safe for standard recycling or if it requires human triage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="input-container">
+                    <div class="input-box">
+                        <div class="input-toolbar">
+                            <i data-feather="image" class="toolbar-icon"></i>
+                            <input type="text" id="image-url-input" placeholder="Optional: Paste an image URL here..." />
+                        </div>
+                        <div class="input-main">
+                            <input type="text" id="chat-input" placeholder="Message GreenBin Genius..." autocomplete="off"/>
+                            <button id="send-btn" class="send-button">
+                                <i data-feather="send"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="input-disclaimer">GreenBin Genius may flag hazardous materials for expert human review.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Initialize Icons -->
+    <script>
+      feather.replace();
+    </script>
+    <script src="/static/app.js"></script>
+</body>
+</html>
